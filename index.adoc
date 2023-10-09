@@ -22,10 +22,10 @@ image::aurora.jpg[aurora, 500, 500]
 === 2.1. Negativo da imagem
 
 [.text-justify]
-Utilizando o programa pixels.cpp como referência, foi implementado um programa <<regions,regions.cpp>> O objetivo do programa é exibir uma determinada parte com o negativo da imagem fornecida, isto é, inverter as cores da região. Para isso, deverá ser solictado ao usuário que ele submeta coordenadas de dois pontos P1 e P2 localizados dentro dos limites do tamanho da imagem, sendo essa região exibida com o negativo da imagem.
+Utilizando o programa pixels.py como referência, foi implementado um programa <<regions,regions.py>> O objetivo do programa é exibir uma determinada parte com o negativo da imagem fornecida, isto é, inverter as cores da região. Para isso, deverá ser solictado ao usuário que ele submeta coordenadas de dois pontos P1 e P2 localizados dentro dos limites do tamanho da imagem, sendo essa região exibida com o negativo da imagem.
 
-[#regions.cpp]
-.Código Fonte regions.cpp
+[#regions.py]
+.Código Fonte regions.py
 [source,regions]
 ----
 import cv2
@@ -81,10 +81,10 @@ image::imagem_negativa.jpg[imagem_negativa, 300, 300]
 === 2.2. Trocar regiões
 
 [.text-justify]
-Utilizando o programa pixels.cpp como referência, foi implementado um programa <<trocaregioes,trocaregioes.cpp>> cujo objetivo é trocar os quadrantes em diagonal na imagem. 
+Utilizando o programa pixels.py como referência, foi implementado um programa <<trocaregioes,trocaregioes.py>> cujo objetivo é trocar os quadrantes em diagonal na imagem. 
 
-[#trocaregioes.cpp]
-.Código Fonte trocaregioes.cpp
+[#trocaregioes.py]
+.Código Fonte trocaregioes.py
 [source,trocaregioes]
 ----
 import cv2
@@ -133,14 +133,14 @@ image::quadrantes_trocados.png[quadrantes_trocados]
 
 === 4.1 Desafio da imagem codificada
 [.text-justify]
-Utilizando o programa esteg-encode.cpp como referência, foi implementado um programa <<decodificacao,decodificacao.cpp>>. O objetivo do programa é recuperar a imagem codificada de uma imagem resultante de esteganografia. Para isso, será utilizada a imagem codificada abaixo.
+Utilizando o programa esteg-encode.py como referência, foi implementado um programa <<decodificacao,decodificacao.py>>. O objetivo do programa é recuperar a imagem codificada de uma imagem resultante de esteganografia. Para isso, será utilizada a imagem codificada abaixo.
 
 [#esteganografia.png]
 .Imagem codificada
 image::esteganografia.png[esteganografia]
 
-[#decodificacao.cpp]
-.Código Fonte decodificacao.cpp
+[#decodificacao.py]
+.Código Fonte decodificacao.py
 [source,decodificacao]
 ----
 import cv2
@@ -196,9 +196,9 @@ Como resultado, foi obtida a imagem abaixo:
 image::esteganografia_escondida.jpg[esteganografia_escondida]
 
 == 5. Preenchendo regiões
-=== 5.1 Algoritmo labeling.cpp
+=== 5.1 Algoritmo labeling.py
 [.text-justify]
-Com base no programa labeling.cpp, foi desenvolvido um programa <<preencheregioes,preencheregioes.cpp>> com o objetivo de:
+Com base no programa labeling.py, foi desenvolvido um programa <<preencheregioes,preencheregioes.py>> com o objetivo de:
 
 1. Rotular elementos caso existam mais de 255 na imagem;
 2. Fazer a contagem de regiões com ou sem buracos internos na imagem. 
@@ -210,8 +210,8 @@ Para isso, foi utilizado como base a imagem abaixo:
 .Bolhas
 image::bolhas.png[bolhas]
 
-[#preencheregioes.cpp]
-.Código Fonte preencheregioes.cpp
+[#preencheregioes.py]
+.Código Fonte preencheregioes.py
 [source,preencheregioes]
 ----
 import cv2
@@ -302,12 +302,12 @@ image::bolhas_final.png[bolhas_final]
 image::contagem_bolhas.png[contagem_bolhas]
 
 == 6. Manipulação de histograma
-=== 6.1 Algoritmo equalize.cpp
+=== 6.1 Algoritmo equalize.py
 [.text-justify]
-Neste exercício, foi desenvolvido o código <<equalize,equalize.cpp>> tendo como base o programa histogram.cpp. O objetivo da atividade foi realizar a equalização do histograma de uma imagem capturada pela câmera do computador.
+Neste exercício, foi desenvolvido o código <<equalize,equalize.py>> tendo como base o programa histogram.py. O objetivo da atividade foi realizar a equalização do histograma de uma imagem capturada pela câmera do computador.
 
-[#equalize.cpp]
-.Código Fonte equalize.cpp
+[#equalize.py]
+.Código Fonte equalize.py
 [source,equalize]
 ----
 import cv2
@@ -363,15 +363,15 @@ Para inicializar a câmera do computador, foi utilizado o método "VideoCapture.
 .Imagem com histograma equalizado
 image::equalizacao.png[equalizacao]
 
-=== 6.2 Algoritmo motiondetector.cpp
+=== 6.2 Algoritmo motiondetector.py
 
 == 7. Filtragem no domínio espacial I
 === 7.1 Filtro laplaciano do gaussiano
 [.text-justify]
-Tendo o programa filtroespacial.cpp como referência, foi implementado o programa <<laplauss,laplauss.cpp>> com o objetivo de calcular o laplaciano do gaussiano de imagens capturadas na câmera do computador.
+Tendo o programa filtroespacial.py como referência, foi implementado o programa <<laplauss,laplauss.py>> com o objetivo de calcular o laplaciano do gaussiano de imagens capturadas na câmera do computador.
 
-[#laplauss.cpp]
-.Código Fonte laplauss.cpp
+[#laplauss.py]
+.Código Fonte laplauss.py
 [source,laplauss]
 ----
 from typing import Match
@@ -521,16 +521,16 @@ image::laplacianogaussiano.png[laplacianogaussiano]
 É possível observar que, com o filtro laplaciano do gaussiano, a imagem primeiro é suavizada e em seguida as bordas da imagem são realçadas. 
 
 == 8. Filtragem no domínio espacial II
-=== 8.1 Algoritmo tiltshift.cpp
+=== 8.1 Algoritmo tiltshift.py
 [.text-justify]
-Com base no programa addweighted.cpp, foi implementado o programa <<tiltshift,tiltshift.cpp>> de modo a implementar três ajustes na tela de interface:
+Com base no programa addweighted.py, foi implementado o programa <<tiltshift,tiltshift.py>> de modo a implementar três ajustes na tela de interface:
 
 1. Um ajuste para regular a altura da região central que entrará em foco;
 2. Um ajuste para regular a força de decaimento da região borrada;
 3. Um ajuste para regular a posição vertical do centro da região que entrará em foco.
 
-[#tiltshift.cpp]
-.Código Fonte tiltshift.cpp
+[#tiltshift.py]
+.Código Fonte tiltshift.py
 [source,tiltshift]
 ----
 import cv2
@@ -646,4 +646,4 @@ O algoritmo acima para aplica o efeito de tiltshift a uma imagem, isto é, uma t
 .Imagem com tiltshift
 image::aurora_tiltshift.png[aurora_tiltshift]
 
-=== 8.2 tiltshiftvideo.cpp
+=== 8.2 tiltshiftvideo.py
