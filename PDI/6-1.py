@@ -57,7 +57,7 @@ else:
             cv2.line(hist_img_g, (i - 1, histh - int(hist_g[i - 1][0])), (i, histh - int(hist_g[i][0])), (0, 255, 0), 1)
             cv2.line(hist_img_r, (i - 1, histh - int(hist_r[i - 1][0])), (i, histh - int(hist_r[i][0])), (0, 0, 255), 1)
 
-        cv2.imshow("Resultado", equalized_frame)
+        cv2.imshow("Resultado", equalized_frame,)
 
         if cv2.waitKey(30) == 27:
             break
