@@ -458,13 +458,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_5_preenchendo_regiões">5. Preenchendo regiões</a>
 <ul class="sectlevel2">
-<li><a href="#_5_1_algoritmo_labeling_py">5.1 Algoritmo labeling.py</a></li>
+<li><a href="#_5_1_algoritmo_labeling">5.1 Algoritmo labeling</a></li>
 </ul>
 </li>
 <li><a href="#_6_manipulação_de_histograma">6. Manipulação de histograma</a>
 <ul class="sectlevel2">
-<li><a href="#_6_1_algoritmo_equalize_py">6.1 Algoritmo equalize.py</a></li>
-<li><a href="#_6_2_algoritmo_motiondetector_py">6.2 Algoritmo motiondetector.py</a></li>
+<li><a href="#_6_1_algoritmo_equalize">6.1 Algoritmo equalize</a></li>
+<li><a href="#_6_2_algoritmo_motiondetector">6.2 Algoritmo motiondetector</a></li>
 </ul>
 </li>
 <li><a href="#_7_filtragem_no_domínio_espacial_i">7. Filtragem no domínio espacial I</a>
@@ -474,8 +474,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_8_filtragem_no_domínio_espacial_ii">8. Filtragem no domínio espacial II</a>
 <ul class="sectlevel2">
-<li><a href="#_8_1_algoritmo_tiltshift_py">8.1 Algoritmo tiltshift.py</a></li>
-<li><a href="#_8_2_tiltshiftvideo_py">8.2 tiltshiftvideo.py</a></li>
+<li><a href="#_8_1_algoritmo_tiltshift">8.1 Algoritmo tiltshift</a></li>
+<li><a href="#_8_2_tiltshiftvideo">8.2 Algoritmo tiltshiftvideo</a></li>
 </ul>
 </li>
 </ul>
@@ -508,7 +508,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_2_1_negativo_da_imagem">2.1. Negativo da imagem</h3>
 <div class="paragraph text-justify">
-<p>Utilizando o programa pixels.py como referência, foi implementado um programa <a href="#regions">regions.py</a> O objetivo do programa é exibir uma determinada parte com o negativo da imagem fornecida, isto é, inverter as cores da região. Para isso, deverá ser solictado ao usuário que ele submeta coordenadas de dois pontos P1 e P2 localizados dentro dos limites do tamanho da imagem, sendo essa região exibida com o negativo da imagem.</p>
+<p>Utilizando o programa pixels.cpp como referência, foi implementado um programa <a href="#regions">regions.py</a> O objetivo do programa é exibir uma determinada parte com o negativo da imagem fornecida, isto é, inverter as cores da região. Para isso, deverá ser solictado ao usuário que ele submeta coordenadas de dois pontos P1 e P2 localizados dentro dos limites do tamanho da imagem, sendo essa região exibida com o negativo da imagem.</p>
 </div>
 <div id="regions" class="listingblock py">
 <div class="title">Código Fonte regions.py</div>
@@ -569,7 +569,7 @@ cv2.destroyAllWindows()</code></pre>
 <div class="sect2">
 <h3 id="_2_2_trocar_regiões">2.2. Trocar regiões</h3>
 <div class="paragraph text-justify">
-<p>Utilizando o programa pixels.py como referência, foi implementado um programa <a href="#trocaregioes">trocaregioes.py</a> cujo objetivo é trocar os quadrantes em diagonal na imagem.</p>
+<p>Utilizando o programa pixels.cpp como referência, foi implementado um programa <a href="#trocaregioes">trocaregioes.py</a> cujo objetivo é trocar os quadrantes em diagonal na imagem.</p>
 </div>
 <div id="trocaregioes" class="listingblock py">
 <div class="title">Código Fonte trocaregioes.py</div>
@@ -631,7 +631,7 @@ cv2.destroyAllWindows()</code></pre>
 <div class="sect2">
 <h3 id="_4_1_desafio_da_imagem_codificada">4.1 Desafio da imagem codificada</h3>
 <div class="paragraph text-justify">
-<p>Utilizando o programa esteg-encode.py como referência, foi implementado um programa <a href="#decodificacao">decodificacao.py</a>. O objetivo do programa é recuperar a imagem codificada de uma imagem resultante de esteganografia. Para isso, será utilizada a imagem codificada abaixo.</p>
+<p>Utilizando o programa esteg-encode.cpp como referência, foi implementado um programa <a href="#decodificacao">decodificacao.py</a>. O objetivo do programa é recuperar a imagem codificada de uma imagem resultante de esteganografia. Para isso, será utilizada a imagem codificada abaixo.</p>
 </div>
 <div id="esteganografia" class="imageblock png">
 <div class="content">
@@ -703,9 +703,9 @@ else:
 <h2 id="_5_preenchendo_regiões">5. Preenchendo regiões</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_5_1_algoritmo_labeling_py">5.1 Algoritmo labeling.py</h3>
+<h3 id="_5_1_algoritmo_labeling">5.1 Algoritmo labeling</h3>
 <div class="paragraph text-justify">
-<p>Com base no programa labeling.py, foi desenvolvido um programa <a href="#preencheregioes">preencheregioes.py</a> com o objetivo de:</p>
+<p>Com base no programa labeling.cpp, foi desenvolvido um programa <a href="#preencheregioes">preencheregioes.py</a> com o objetivo de:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -827,9 +827,9 @@ else:
 <h2 id="_6_manipulação_de_histograma">6. Manipulação de histograma</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_6_1_algoritmo_equalize_py">6.1 Algoritmo equalize.py</h3>
+<h3 id="_6_1_algoritmo_equalize">6.1 Algoritmo equalize</h3>
 <div class="paragraph text-justify">
-<p>Neste exercício, foi desenvolvido o código <a href="#equalize">equalize.py</a> tendo como base o programa histogram.py. O objetivo da atividade foi realizar a equalização do histograma de uma imagem capturada pela câmera do computador.</p>
+<p>Neste exercício, foi desenvolvido o código <a href="#equalize">equalize.py</a> tendo como base o programa histogram.cpp. O objetivo da atividade foi realizar a equalização do histograma de uma imagem capturada pela câmera do computador.</p>
 </div>
 <div id="equalize" class="listingblock py">
 <div class="title">Código Fonte equalize.py</div>
@@ -891,7 +891,7 @@ else:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_6_2_algoritmo_motiondetector_py">6.2 Algoritmo motiondetector.py</h3>
+<h3 id="_6_2_algoritmo_motiondetector">6.2 Algoritmo motiondetector</h3>
 
 </div>
 </div>
@@ -902,7 +902,7 @@ else:
 <div class="sect2">
 <h3 id="_7_1_filtro_laplaciano_do_gaussiano">7.1 Filtro laplaciano do gaussiano</h3>
 <div class="paragraph text-justify">
-<p>Tendo o programa filtroespacial.py como referência, foi implementado o programa <a href="#laplauss">laplauss.py</a> com o objetivo de calcular o laplaciano do gaussiano de imagens capturadas na câmera do computador.</p>
+<p>Tendo o programa filtroespacial.cpp como referência, foi implementado o programa <a href="#laplauss">laplauss.py</a> com o objetivo de calcular o laplaciano do gaussiano de imagens capturadas na câmera do computador.</p>
 </div>
 <div id="laplauss" class="listingblock py">
 <div class="title">Código Fonte laplauss.py</div>
@@ -1065,9 +1065,9 @@ cv2.destroyAllWindows()</code></pre>
 <h2 id="_8_filtragem_no_domínio_espacial_ii">8. Filtragem no domínio espacial II</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_8_1_algoritmo_tiltshift_py">8.1 Algoritmo tiltshift.py</h3>
+<h3 id="_8_1_algoritmo_tiltshift">8.1 Algoritmo tiltshift</h3>
 <div class="paragraph text-justify">
-<p>Com base no programa addweighted.py, foi implementado o programa <a href="#tiltshift">tiltshift.py</a> de modo a implementar três ajustes na tela de interface:</p>
+<p>Com base no programa addweighted.cpp, foi implementado o programa <a href="#tiltshift">tiltshift.py</a> de modo a implementar três ajustes na tela de interface:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1202,7 +1202,7 @@ if __name__ == "__main__":
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_2_tiltshiftvideo_py">8.2 tiltshiftvideo.py</h3>
+<h3 id="_8_2_tiltshiftvideo">8.2 Algoritmo tiltshiftvideo</h3>
 
 </div>
 </div>
