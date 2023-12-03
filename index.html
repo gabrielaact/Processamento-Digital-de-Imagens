@@ -458,13 +458,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_5_preenchendo_regiões">5. Preenchendo regiões</a>
 <ul class="sectlevel2">
-<li><a href="#_5_1_algoritmo_labeling">5.1 Algoritmo labeling</a></li>
+<li><a href="#_5_1_algoritmo_labeling_cpp">5.1 Algoritmo labeling.cpp</a></li>
 </ul>
 </li>
 <li><a href="#_6_manipulação_de_histograma">6. Manipulação de histograma</a>
 <ul class="sectlevel2">
-<li><a href="#_6_1_algoritmo_equalize">6.1 Algoritmo equalize</a></li>
-<li><a href="#_6_2_algoritmo_motiondetector">6.2 Algoritmo motiondetector</a></li>
+<li><a href="#_6_1_algoritmo_equalize_cpp">6.1 Algoritmo equalize.cpp</a></li>
+<li><a href="#_6_2_algoritmo_motiondetector_cpp">6.2 Algoritmo motiondetector.cpp</a></li>
 </ul>
 </li>
 <li><a href="#_7_filtragem_no_domínio_espacial_i">7. Filtragem no domínio espacial I</a>
@@ -474,8 +474,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_8_filtragem_no_domínio_espacial_ii">8. Filtragem no domínio espacial II</a>
 <ul class="sectlevel2">
-<li><a href="#_8_1_algoritmo_tiltshift">8.1 Algoritmo tiltshift</a></li>
-<li><a href="#_8_2_tiltshiftvideo">8.2 Algoritmo tiltshiftvideo</a></li>
+<li><a href="#_8_1_algoritmo_tiltshift_cpp">8.1 Algoritmo tiltshift.cpp</a></li>
+<li><a href="#_8_2_tiltshiftvideo_cpp">8.2 tiltshiftvideo.cpp</a></li>
+</ul>
+</li>
+<li><a href="#_9_a_transformada_discreta_de_fourier">9. A Transformada Discreta de Fourier</a></li>
+<li><a href="#_10_filtragem_no_domínio_da_frequência">10. Filtragem no Domínio da Frequência</a></li>
+<li><a href="#_11_detecção_de_bordas_com_o_algoritmo_de_canny">11. Detecção de bordas com o algoritmo de Canny</a>
+<ul class="sectlevel2">
+<li><a href="#_11_1_algoritmo_cannypoints_cpp">11.1 Algoritmo cannypoints.cpp</a></li>
+</ul>
+</li>
+<li><a href="#_12_quantização_vetorial_com_k_means">12. Quantização vetorial com k-means</a>
+<ul class="sectlevel2">
+<li><a href="#_12_1_algoritmo_kmeans_cpp">12.1 Algoritmo kmeans.cpp</a></li>
+</ul>
+</li>
+<li><a href="#_13_filtragem_de_forma_com_morfologia_matemática">13. Filtragem de forma com morfologia matemática</a>
+<ul class="sectlevel2">
+<li><a href="#_13_1_algoritmo_morfologia_cpp">13.1 Algoritmo morfologia.cpp</a></li>
 </ul>
 </li>
 </ul>
@@ -508,10 +525,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_2_1_negativo_da_imagem">2.1. Negativo da imagem</h3>
 <div class="paragraph text-justify">
-<p>Utilizando o programa pixels.cpp como referência, foi implementado um programa <a href="#regions">regions.py</a> O objetivo do programa é exibir uma determinada parte com o negativo da imagem fornecida, isto é, inverter as cores da região. Para isso, deverá ser solictado ao usuário que ele submeta coordenadas de dois pontos P1 e P2 localizados dentro dos limites do tamanho da imagem, sendo essa região exibida com o negativo da imagem.</p>
+<p>Utilizando o programa pixels.cpp como referência, foi implementado um programa <a href="#regions">regions.cpp</a> O objetivo do programa é exibir uma determinada parte com o negativo da imagem fornecida, isto é, inverter as cores da região. Para isso, deverá ser solictado ao usuário que ele submeta coordenadas de dois pontos P1 e P2 localizados dentro dos limites do tamanho da imagem, sendo essa região exibida com o negativo da imagem.</p>
 </div>
-<div id="regions" class="listingblock py">
-<div class="title">Código Fonte regions.py</div>
+<div id="regions" class="listingblock cpp">
+<div class="title">Código Fonte regions.cpp</div>
 <div class="content">
 <pre class="highlight"><code class="language-regions" data-lang="regions">import cv2
 import numpy as np
@@ -569,10 +586,10 @@ cv2.destroyAllWindows()</code></pre>
 <div class="sect2">
 <h3 id="_2_2_trocar_regiões">2.2. Trocar regiões</h3>
 <div class="paragraph text-justify">
-<p>Utilizando o programa pixels.cpp como referência, foi implementado um programa <a href="#trocaregioes">trocaregioes.py</a> cujo objetivo é trocar os quadrantes em diagonal na imagem.</p>
+<p>Utilizando o programa pixels.cpp como referência, foi implementado um programa <a href="#trocaregioes">trocaregioes.cpp</a> cujo objetivo é trocar os quadrantes em diagonal na imagem.</p>
 </div>
-<div id="trocaregioes" class="listingblock py">
-<div class="title">Código Fonte trocaregioes.py</div>
+<div id="trocaregioes" class="listingblock cpp">
+<div class="title">Código Fonte trocaregioes.cpp</div>
 <div class="content">
 <pre class="highlight"><code class="language-trocaregioes" data-lang="trocaregioes">import cv2
 import sys
@@ -631,7 +648,7 @@ cv2.destroyAllWindows()</code></pre>
 <div class="sect2">
 <h3 id="_4_1_desafio_da_imagem_codificada">4.1 Desafio da imagem codificada</h3>
 <div class="paragraph text-justify">
-<p>Utilizando o programa esteg-encode.cpp como referência, foi implementado um programa <a href="#decodificacao">decodificacao.py</a>. O objetivo do programa é recuperar a imagem codificada de uma imagem resultante de esteganografia. Para isso, será utilizada a imagem codificada abaixo.</p>
+<p>Utilizando o programa esteg-encode.cpp como referência, foi implementado um programa <a href="#decodificacao">decodificacao.cpp</a>. O objetivo do programa é recuperar a imagem codificada de uma imagem resultante de esteganografia. Para isso, será utilizada a imagem codificada abaixo.</p>
 </div>
 <div id="esteganografia" class="imageblock png">
 <div class="content">
@@ -639,8 +656,8 @@ cv2.destroyAllWindows()</code></pre>
 </div>
 <div class="title">Figure 4. Imagem codificada</div>
 </div>
-<div id="decodificacao" class="listingblock py">
-<div class="title">Código Fonte decodificacao.py</div>
+<div id="decodificacao" class="listingblock cpp">
+<div class="title">Código Fonte decodificacao.cpp</div>
 <div class="content">
 <pre class="highlight"><code class="language-decodificacao" data-lang="decodificacao">import cv2
 
@@ -703,9 +720,9 @@ else:
 <h2 id="_5_preenchendo_regiões">5. Preenchendo regiões</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_5_1_algoritmo_labeling">5.1 Algoritmo labeling</h3>
+<h3 id="_5_1_algoritmo_labeling_cpp">5.1 Algoritmo labeling.cpp</h3>
 <div class="paragraph text-justify">
-<p>Com base no programa labeling.cpp, foi desenvolvido um programa <a href="#preencheregioes">preencheregioes.py</a> com o objetivo de:</p>
+<p>Com base no programa labeling.cpp, foi desenvolvido um programa <a href="#preencheregioes">preencheregioes.cpp</a> com o objetivo de:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -726,8 +743,8 @@ else:
 </div>
 <div class="title">Figure 6. Bolhas</div>
 </div>
-<div id="preencheregioes" class="listingblock py">
-<div class="title">Código Fonte preencheregioes.py</div>
+<div id="preencheregioes" class="listingblock cpp">
+<div class="title">Código Fonte preencheregioes.cpp</div>
 <div class="content">
 <pre class="highlight"><code class="language-preencheregioes" data-lang="preencheregioes">import cv2
 import numpy as np
@@ -827,12 +844,12 @@ else:
 <h2 id="_6_manipulação_de_histograma">6. Manipulação de histograma</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_6_1_algoritmo_equalize">6.1 Algoritmo equalize</h3>
+<h3 id="_6_1_algoritmo_equalize_cpp">6.1 Algoritmo equalize.cpp</h3>
 <div class="paragraph text-justify">
-<p>Neste exercício, foi desenvolvido o código <a href="#equalize">equalize.py</a> tendo como base o programa histogram.cpp. O objetivo da atividade foi realizar a equalização do histograma de uma imagem capturada pela câmera do computador.</p>
+<p>Neste exercício, foi desenvolvido o código <a href="#equalize">equalize.cpp</a> tendo como base o programa histogram.cpp. O objetivo da atividade foi realizar a equalização do histograma de uma imagem capturada pela câmera do computador.</p>
 </div>
-<div id="equalize" class="listingblock py">
-<div class="title">Código Fonte equalize.py</div>
+<div id="equalize" class="listingblock cpp">
+<div class="title">Código Fonte equalize.cpp</div>
 <div class="content">
 <pre class="highlight"><code class="language-equalize" data-lang="equalize">import cv2
 import numpy as np
@@ -891,7 +908,7 @@ else:
 </div>
 </div>
 <div class="sect2">
-<h3 id="_6_2_algoritmo_motiondetector">6.2 Algoritmo motiondetector</h3>
+<h3 id="_6_2_algoritmo_motiondetector_cpp">6.2 Algoritmo motiondetector.cpp</h3>
 
 </div>
 </div>
@@ -902,10 +919,10 @@ else:
 <div class="sect2">
 <h3 id="_7_1_filtro_laplaciano_do_gaussiano">7.1 Filtro laplaciano do gaussiano</h3>
 <div class="paragraph text-justify">
-<p>Tendo o programa filtroespacial.cpp como referência, foi implementado o programa <a href="#laplauss">laplauss.py</a> com o objetivo de calcular o laplaciano do gaussiano de imagens capturadas na câmera do computador.</p>
+<p>Tendo o programa filtroespacial.cpp como referência, foi implementado o programa <a href="#laplauss">laplauss.cpp</a> com o objetivo de calcular o laplaciano do gaussiano de imagens capturadas na câmera do computador.</p>
 </div>
-<div id="laplauss" class="listingblock py">
-<div class="title">Código Fonte laplauss.py</div>
+<div id="laplauss" class="listingblock cpp">
+<div class="title">Código Fonte laplauss.cpp</div>
 <div class="content">
 <pre class="highlight"><code class="language-laplauss" data-lang="laplauss">from typing import Match
 import numpy as np
@@ -1065,9 +1082,9 @@ cv2.destroyAllWindows()</code></pre>
 <h2 id="_8_filtragem_no_domínio_espacial_ii">8. Filtragem no domínio espacial II</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_8_1_algoritmo_tiltshift">8.1 Algoritmo tiltshift</h3>
+<h3 id="_8_1_algoritmo_tiltshift_cpp">8.1 Algoritmo tiltshift.cpp</h3>
 <div class="paragraph text-justify">
-<p>Com base no programa addweighted.cpp, foi implementado o programa <a href="#tiltshift">tiltshift.py</a> de modo a implementar três ajustes na tela de interface:</p>
+<p>Com base no programa addweighted.cpp, foi implementado o programa <a href="#tiltshift">tiltshift.cpp</a> de modo a implementar três ajustes na tela de interface:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1082,8 +1099,8 @@ cv2.destroyAllWindows()</code></pre>
 </li>
 </ol>
 </div>
-<div id="tiltshift" class="listingblock py">
-<div class="title">Código Fonte tiltshift.py</div>
+<div id="tiltshift" class="listingblock cpp">
+<div class="title">Código Fonte tiltshift.cpp</div>
 <div class="content">
 <pre class="highlight"><code class="language-tiltshift" data-lang="tiltshift">import cv2
 import numpy as np
@@ -1202,15 +1219,268 @@ if __name__ == "__main__":
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_2_tiltshiftvideo">8.2 Algoritmo tiltshiftvideo</h3>
+<h3 id="_8_2_tiltshiftvideo_cpp">8.2 tiltshiftvideo.cpp</h3>
 
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_a_transformada_discreta_de_fourier">9. A Transformada Discreta de Fourier</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_10_filtragem_no_domínio_da_frequência">10. Filtragem no Domínio da Frequência</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_11_detecção_de_bordas_com_o_algoritmo_de_canny">11. Detecção de bordas com o algoritmo de Canny</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_11_1_algoritmo_cannypoints_cpp">11.1 Algoritmo cannypoints.cpp</h3>
+<div class="paragraph text-justify">
+<p>Utilizando os programas canny.cpp e pontilhismo.cpp como referência, foi implementado o programa <a href="#cannypoints">cannypoints.cpp</a> com o intuito de usar as bordas produzidas pelo algoritmo de Canny para melhorar a qualidade da imagem pontilhista gerada.</p>
+</div>
+<div id="cannypoints" class="listingblock cpp">
+<div class="title">Código Fonte cannypoints.cpp</div>
+<div class="content">
+<pre class="highlight"><code class="language-cannypoints" data-lang="cannypoints">import numpy as np
+import sys
+import cv2
+import random
+
+# Variaveis globais
+top_slider = 100;
+
+# Aplica o filtro de Canny na imagem
+def filtroCanny(img):
+    global top_slider, imgCanny
+    imgCanny = cv2.Canny(img,top_slider, 3*top_slider)
+    return imgCanny
+
+
+# Cria uma imagem em Pontilhimos
+def pontilhismo(img):
+    height, width = img.shape
+
+    # Pega o valor do raio aleatório
+    radius = random.randint(1, 5)
+
+    # Cria uma copia da imagem
+    imgCopy = img.copy()
+
+    # Interação para criar os circulos aletoriamente
+    for i in range(0,height,radius):
+        for j in range(0,width,radius):
+            number = random.randint(0, 1)
+            if number == 1:
+                # Pega a cor do pixel no ponto da matriz
+                gray = int(img[i][j])
+                color = (gray,gray,gray)
+                # Cria um circulo com o raio encontrado aleatoriamente
+                cv2.circle(imgCopy, (j,i), radius, color, radius)
+                # Pega um novo valor para o raio
+                radius = random.randint(1, 5)
+
+    return imgCopy
+
+# Carregar a imagem
+img = cv2.imread("aurora.jpg", cv2.IMREAD_GRAYSCALE)
+
+if (img is None):
+    sys.exit("Imagem não encontrada.")
+
+# Obter as dimensões da imagem
+height, width = img.shape
+
+cv2.imshow("Original", img)
+
+# Aplicar o filtro Canny na imagem
+imgCanny = filtroCanny(img)
+cv2.imshow("Canny", imgCanny)
+
+# Aplicar o pontilhismo na imagem
+imgPonti = pontilhismo(img)
+cv2.imshow("pontilhismo", imgPonti)
+
+# Aplicar Canny com Pontilhismo
+heightPonti, widthPonti = imgPonti.shape
+radius = 4
+
+imgCannyPoint = imgPonti.copy()
+
+for i in range(heightPonti):
+    for j in range(widthPonti):
+        if (imgCanny[i][j] == 255):
+            gray = int(img[i][j])
+            color = (gray, gray, gray)
+            cv2.circle(imgCannyPoint, (j, i), radius, color, radius)
+
+cv2.imshow("cannypoint", imgCannyPoint)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()</code></pre>
+</div>
+</div>
+<div class="paragraph text-justify">
+<p>O código acima realiza as aplicações do filtro de Canny, do pontilhismo e da combinação de Canny com pontilhismo em uma imagem em escala de cinza. A utilização do filtro de Canny é feita a partir da função Canny do OpenCV, enquanto no pontilhismo, a cada iteração, a função percorre a imagem original e, com uma probabilidade de 50%, desenha um círculo de raio aleatório no local, colorindo-o com a intensidade do pixel original. Na combinação do Canny com o pontilhismo, os pixels brancos (bordas) na imagem de Canny (imgCanny) são destacados na imagem de pontilhismo, desenhando círculos brancos ao redor desses pixels.</p>
+</div>
+<div id="aurora_cannypoint" class="imageblock png">
+<div class="content">
+<img src="aurora_cannypoint.png" alt="aurora_cannypoint">
+</div>
+<div class="title">Figure 13. Aplicação do Filtro de Canny e Pontilhismo</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_12_quantização_vetorial_com_k_means">12. Quantização vetorial com k-means</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_12_1_algoritmo_kmeans_cpp">12.1 Algoritmo kmeans.cpp</h3>
+<div class="paragraph text-justify">
+<p>A partir do programa kmeans.cpp, foi desenvolvido um programa na qual a execução do código ocorre usando o parâmetro nRodadas=1 e os centros são iniciados de forma aleatória usando o parâmetro KMEANS_RANDOM_CENTERS ao invés de KMEANS_PP_CENTERS.</p>
+</div>
+<div id="kmeans" class="listingblock cpp">
+<div class="title">Código Fonte kmeans.cpp</div>
+<div class="content">
+<pre class="highlight"><code class="language-kmeans" data-lang="kmeans">import cv2
+import numpy as np
+
+# Definição do número de clusters desejados e o número de rodadas do algoritmo k-means
+n_clusters = 6
+n_rodadas = 1
+
+# Carregar a imagem
+img = cv2.imread("aurora.jpg")
+
+if (img is None):
+    sys.exit("Imagem não encontrada.")
+
+# Reformatação da matriz de pixels para preparar os dados para o k-means
+samples = img.reshape((-1, 3))
+samples = np.float32(samples)
+
+# Definição dos critérios de parada para o algoritmo k-means
+criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10000, 0.0001)
+
+# Aplicação do algoritmo k-means aos dados de amostra
+_, labels, centers = cv2.kmeans(samples, n_clusters, None, criteria, n_rodadas, cv2.KMEANS_RANDOM_CENTERS)
+
+# Conversão dos centros dos clusters para o tipo de dados uint8
+centers = np.uint8(centers)
+
+# Criar imagem segmentada, onde cada pixel é substituído pelo valor do centroide do cluster
+segmented_image = centers[labels.flatten()]
+segmented_image = segmented_image.reshape(img.shape)
+
+# Exibir da imagem segmentada
+cv2.imshow("clustered image", segmented_image)
+
+# Salvar imagem segmentada
+cv2.imwrite("aurora_clustered.jpg", segmented_image)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()</code></pre>
+</div>
+</div>
+<div class="paragraph text-justify">
+<p>Conforme solicitado, foram realizadas 10 rodadas diferentes do algoritmo, porém os resultados foram bastante semelhantes, já que no código está definido n_rodadas = 1. Porém, como os centros são iniciados de forma aleatória, eles podem convergir de maneira diferente nas execuções.</p>
+</div>
+<div id="aurora_clustered" class="imageblock jpg">
+<div class="content">
+<img src="aurora_clustered.jpg" alt="aurora_clustered">
+</div>
+<div class="title">Figure 14. Aplicação do k-means</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_13_filtragem_de_forma_com_morfologia_matemática">13. Filtragem de forma com morfologia matemática</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_13_1_algoritmo_morfologia_cpp">13.1 Algoritmo morfologia.cpp</h3>
+<div class="paragraph text-justify">
+<p>Nesta seção, foi desenvolvido um programa para resolver o problema da pré-filtragem de forma para reconhecimento dos caracteres usando operações morfológicas. Os caracteres estão sendo exibidos da maneira abaixo:</p>
+</div>
+<div id="digitos" class="imageblock png">
+<div class="content">
+<img src="digitos.png" alt="digitos">
+</div>
+<div class="title">Figure 15. Caracteres segmentados</div>
+</div>
+<div class="paragraph text-justify">
+<p>O objetivo do programa é exibir os dígitos sem a separação entre os segmentos do visor.</p>
+</div>
+<div id="morfologia" class="listingblock cpp">
+<div class="title">Código Fonte morfologia.cpp</div>
+<div class="content">
+<pre class="highlight"><code class="language-morfologia" data-lang="morfologia">import cv2
+import numpy as np
+import sys
+
+# Carregar a imagem
+image = cv2.imread("digitos-1.png", cv2.IMREAD_UNCHANGED)
+
+if (image is None):
+    sys.exit("Imagem não encontrada.")
+else:
+    # Aplicar a operação de abertura (MORPH_OPEN) na imagem
+    # O segundo argumento é o tipo de operação (elemento estruturante retangular 4x10)
+    output = cv2.morphologyEx(image, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_RECT, (4, 10)))
+
+    # Exibir o resultado
+    cv2.imshow("digitos", output)
+
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Os resultados podem ser vistos abaixo:</p>
+</div>
+<div id="digitosok-1" class="imageblock png">
+<div class="content">
+<img src="digitosok-1.png" alt="digitosok-1">
+</div>
+<div class="title">Figure 16. Digito 1</div>
+</div>
+<div id="digitosok-2" class="imageblock png">
+<div class="content">
+<img src="digitosok-2.png" alt="digitosok-2">
+</div>
+<div class="title">Figure 17. Digito 2</div>
+</div>
+<div id="digitosok-3" class="imageblock png">
+<div class="content">
+<img src="digitosok-3.png" alt="digitosok-3">
+</div>
+<div class="title">Figure 18. Digito 3</div>
+</div>
+<div id="digitosok-4" class="imageblock png">
+<div class="content">
+<img src="digitosok-4.png" alt="digitosok-4">
+</div>
+<div class="title">Figure 19. Digito 4</div>
+</div>
+<div id="digitosok-5" class="imageblock png">
+<div class="content">
+<img src="digitosok-5.png" alt="digitosok-5">
+</div>
+<div class="title">Figure 20. Digito 5</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-10-08 22:31:07 -0300
+Last updated 2023-12-03 13:04:45 -0300
 </div>
 </div>
 </body>
